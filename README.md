@@ -2,6 +2,9 @@
 
 AgentLife 是一套面向下一代 AI 协作场景的产品体系。它把聊天、Bot、权限、路由、多端访问与本地 Agent 执行能力连接起来，让你不必坐在电脑前，也能像发消息一样调度本地 `Claude Code`、`Codex`、`Qwen` 等 AI Agent，在真实工作区里完成代码、文件和自动化任务。
 
+web入口：https://www.m2a.chat/agent-life/login
+安卓客户端：https://expo.dev/artifacts/eas/gLch4GEuNK9TnzSwWgiR3X.apk
+
 ![alt text](README_images/image-1.png)
 
 它不是一个只会“陪你聊天”的 AI 外壳，也不是一个把所有能力都锁在云端的封闭平台。  
