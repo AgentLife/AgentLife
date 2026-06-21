@@ -6,6 +6,8 @@ web入口：https://www.m2a.chat/agent-life/login
 
 安卓客户端：https://expo.dev/artifacts/eas/gLch4GEuNK9TnzSwWgiR3X.apk
 
+苹果 App：https://testflight.apple.com/join/mBeuWRF1（目前内测需通过 TestFlight 安装，无需兑换码）
+
 ![alt text](README_images/image-1.png)
 
 它不是一个只会“陪你聊天”的 AI 外壳，也不是一个把所有能力都锁在云端的封闭平台。  
