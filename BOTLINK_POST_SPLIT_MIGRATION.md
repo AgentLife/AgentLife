@@ -48,6 +48,7 @@ All target repositories use the branch `sync/botlink-post-split`.
 - [x] Port structured mention routing, bot-status timestamps, and batch presence API.
 - [x] Port scheduled conversation messages and interval execution.
 - [x] Port Agent roles, capabilities, provisioning controls, and Agent-owned schedule storage.
-- [ ] Add Agent-managed conversation/member APIs and Agent schedule internal APIs.
+- [x] Add Agent-managed conversation/member APIs.
+- [ ] Add Agent schedule internal APIs.
 - [ ] Complete cross-group shadow orchestration and routing dispatch.
 - [ ] Complete remaining capabilities in dependency order.
