@@ -20,15 +20,15 @@ All target repositories use the branch `sync/botlink-post-split`.
 
 | Capability | Botlink repositories | AgentLife status | Migration action |
 |---|---|---|---|
-| Cross-group shadow participants and messages | conversation, message, routing, permission, bot-gateway, web | Missing | Adapt across all six repositories |
-| Requester-scoped approval auto grants | permission | Missing | Add `t_al_bot_approval_auto_grants` and preserve existing approval modes |
-| Structured mention routing and punctuation handling | routing, bot-gateway, web | Partial | Merge with AgentLife REQ-013 reply-routing behavior |
-| Bot reply stream timing/status | client-gateway, bot-gateway, routing, web | Partial | Preserve AgentLife timestamp normalization and add timing fields |
-| Scheduled and interval messages | conversation, bot-gateway, web | Partial | Merge interval and Agent-owned schedule support with AgentLife todos/reminders |
-| Agent group/member management | conversation, bot-gateway | Missing | Add internal APIs, OpenAPI exposure, and membership rules |
-| Agent provisioning and roles | bot, conversation, bot-gateway, operation, operation-web, web | Partial | Add provisioning tokens, role controls, operations-agent UI and APIs |
-| Batch participant presence | routing | Missing | Add internal batch API using AgentLife session stores |
-| User status controls | user and administration surfaces | Baseline likely imported | Verify current behavior; port only missing paths |
+| Cross-group shadow participants and messages | conversation, message, routing, permission, bot-gateway, web | Complete | Adapted across all six repositories with AgentLife table/API names |
+| Requester-scoped approval auto grants | permission | Complete | Added `t_al_bot_approval_auto_grants`; merged ordinary and cross-group grant scopes |
+| Structured mention routing and punctuation handling | routing, bot-gateway, web | Complete | Preserved AgentLife REQ-013 and added selected shadow/Agent mention routing |
+| Bot reply stream timing/status | client-gateway, bot-gateway, routing, web | Complete | Preserved timestamp normalization and added start/chunk/completion timestamps |
+| Scheduled and interval messages | conversation, bot-gateway, web | Complete | Added interval, Agent-owned APIs, run-now, and user controls |
+| Agent group/member management | conversation, bot-gateway | Complete | Added internal/OpenAPI APIs while retaining AgentLife member limits |
+| Agent provisioning and roles | bot, conversation, bot-gateway, operation, operation-web, web | Complete | Added provision tokens, roles/capabilities, and operations-Agent UI |
+| Batch participant presence | routing | Complete | Added internal batch presence API using AgentLife session stores |
+| User status controls | user and administration surfaces | Verified | No post-split Botlink business delta required in user-service |
 
 ## Delivery order
 
@@ -49,6 +49,29 @@ All target repositories use the branch `sync/botlink-post-split`.
 - [x] Port scheduled conversation messages and interval execution.
 - [x] Port Agent roles, capabilities, provisioning controls, and Agent-owned schedule storage.
 - [x] Add Agent-managed conversation/member APIs.
-- [ ] Add Agent schedule internal APIs.
-- [ ] Complete cross-group shadow orchestration and routing dispatch.
-- [ ] Complete remaining capabilities in dependency order.
+- [x] Add Agent schedule internal APIs.
+- [x] Complete cross-group shadow orchestration and routing dispatch.
+- [x] Integrate approved shadow delivery, return metadata, and Bridge CLI self-mentions.
+- [x] Add shadow binding management, structured shadow mentions, and sender display in web.
+- [x] Complete shadow binding cleanup and real-Agent multi-group membership lifecycle.
+- [x] Merge cross-group approval callbacks with requester-scoped auto grants.
+- [x] Add operation provision-token backend and administration page.
+- [x] Push `sync/botlink-post-split` for all eleven repositories.
+- [x] Run repository tests/builds for every changed repository.
+- [x] Scan migrated source for Botlink package/table names, production URLs, and credential patterns.
+
+## Final branch heads
+
+| Repository | Head |
+|---|---|
+| agent-life-bot-gateway | `f891c69` |
+| agent-life-bot-service | `a4701e5` |
+| agent-life-client-gateway | `8052d30` |
+| agent-life-conversation-service | `406c7b1` |
+| agent-life-message-service | `6c1012b` |
+| agent-life-permission-service | `1d20e48` |
+| agent-life-routing-service | `10404c6` |
+| agent-life-user-service | `e3b79df` (no migration delta) |
+| agent-life-web | `20d4157` |
+| agent-life-operation-service | `e9969a6` |
+| agent-life-operation-web | `62eb086` |
