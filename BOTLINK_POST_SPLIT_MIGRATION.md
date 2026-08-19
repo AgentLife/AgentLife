@@ -59,6 +59,7 @@ All target repositories use the branch `sync/botlink-post-split`.
 - [x] Push `sync/botlink-post-split` for all eleven repositories.
 - [x] Run repository tests/builds for every changed repository.
 - [x] Scan migrated source for Botlink package/table names, production URLs, and credential patterns.
+- [x] Review and fix shadow participant serialization and web binding contract mismatches.
 
 ## Final branch heads
 
@@ -67,11 +68,11 @@ All target repositories use the branch `sync/botlink-post-split`.
 | agent-life-bot-gateway | `f891c69` |
 | agent-life-bot-service | `a4701e5` |
 | agent-life-client-gateway | `8052d30` |
-| agent-life-conversation-service | `406c7b1` |
+| agent-life-conversation-service | `f7eac0f` |
 | agent-life-message-service | `6c1012b` |
 | agent-life-permission-service | `1d20e48` |
 | agent-life-routing-service | `10404c6` |
 | agent-life-user-service | `e3b79df` (no migration delta) |
-| agent-life-web | `20d4157` |
+| agent-life-web | `b38bbff` |
 | agent-life-operation-service | `e9969a6` |
 | agent-life-operation-web | `62eb086` |
