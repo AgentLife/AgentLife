@@ -44,6 +44,10 @@ All target repositories use the branch `sync/botlink-post-split`.
 - [x] Establish split window and confirm histories are unrelated.
 - [x] Create migration branches in all eleven AgentLife repositories.
 - [x] Port shadow message sender support to `agent-life-message-service`.
-- [ ] Port approval storage and decision behavior.
-- [ ] Port routing behavior and batch presence API.
+- [x] Port requester-scoped approval storage and decision behavior.
+- [x] Port structured mention routing, bot-status timestamps, and batch presence API.
+- [x] Port scheduled conversation messages and interval execution.
+- [x] Port Agent roles, capabilities, provisioning controls, and Agent-owned schedule storage.
+- [ ] Add Agent-managed conversation/member APIs and Agent schedule internal APIs.
+- [ ] Complete cross-group shadow orchestration and routing dispatch.
 - [ ] Complete remaining capabilities in dependency order.
